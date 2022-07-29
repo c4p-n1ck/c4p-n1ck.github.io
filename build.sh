@@ -16,6 +16,6 @@ cd /tmp/gh-pages
 git update-ref -d refs/heads/gh-pages
 git add -A
 git commit -m 'Deploying mdbook to GitHub pages.'
-git push -f origin gh-pages
+git push --force origin gh-pages
 cd -
 echo "done!"
