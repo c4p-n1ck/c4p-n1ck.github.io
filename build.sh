@@ -1,10 +1,19 @@
 #!/bin/bash
 
-git worktree add /tmp/gh-pages
+# Adding a worktree.
+if [[ -d /tmp/mdbook ]]; then
+  rm -rf /tmp/mdbook
+fi; git worktree add -f /tmp/mdbook
+
+# Building the mdbook
 mdbook build
-rm -rf /tmp/book/*
-cp -rp book/* /tmp/book
-cd /tmp/book
+
+# Copying all the built files to /tmp
+rm -rf /tmp/mdbook/* && cp -rp ./book/* /tmp/mdbook
+
+cd /tmp/mdbook
+exit
+
 git add -A
 git commit -m 'Deploy mdbook'
 git push origin gh-pages
