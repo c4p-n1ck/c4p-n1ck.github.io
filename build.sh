@@ -3,7 +3,7 @@
 # Adding a worktree.
 if [[ -d /tmp/gh-pages ]]; then
   rm -rf /tmp/gh-pages
-fi; git worktree add /tmp/gh-pages
+fi; git worktree add -f /tmp/gh-pages
 
 # Building the mdbook
 mdbook build
