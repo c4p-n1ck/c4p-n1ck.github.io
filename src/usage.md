@@ -1,5 +1,7 @@
 # Usage
 
+> Also note that the name of the tool has been changes, since the command from `NtHiM` to `NtH1M`.
+
 | Flag | Description                           | Example                              |
 | ---- | ------------------------------------- | ------------------------------------ |
 | -h   | Display help related to usage         | NtH1M -h                             |
@@ -34,5 +36,3 @@ NtH1M -f hostnames.txt
 ### Usage Demonstration(without -p flag):
 
 ![NtH1M Usage Demonstration \(without -p flag\)](https://github.com/TheBinitGhimire/NtHiM/raw/main/images/demonstration.gif)
-
-> Also note that the name of the tool has been changes, since the command from `NtHiM` to `NtH1M`.
