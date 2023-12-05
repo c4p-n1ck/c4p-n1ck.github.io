@@ -2,6 +2,12 @@ const reader = new FileReader()
 
 const select_img = () => {
 	document.querySelector('input').click();
+	document.querySelector('input').oninput = () => {
+	  reader.readAsDataURL( document.querySelector('input').files[0] );
+		reader.onload = () => {
+			qrcode.decode(reader.result);
+		}
+	}
 }
 
 const allowDrop = e => {
